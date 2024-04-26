@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarMeto</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Using Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>SELECT YOUR CHOICE</h3>
+        <div class="choices">
+            <p id="men">
+                <i class="fas fa-male"></i>
+                <button class="men-button" onclick="openTab(event, 'tab1', 'Men')">Men</button>
+            </p>
+
+            <p id="women">
+                <i class="fas fa-female"></i>
+                <button class="women-button" onclick="openTab(event, 'tab2', 'Women')">Women</button>
+            </p>
+            <p id="kids">
+                <i class="fas fa-child"></i>
+                <button class="kids-button" onclick="openTab(event, 'tab3', 'Kids')">Kids</button>
+            </p>
+        </div>
+
+        <div class="items">
+            <div id="tab1" class="tab">
+                <h3>Men's Items</h3>
+                <div id="item-details-men" class="item-details">
+                    <div id="product-list"></div>
+
+                </div>
+            </div>
+
+            <div id="tab2" class="tab">
+                <h3>Women's Items</h3>
+                <div id="item-details-women" class="item-details"></div>
+            </div>
+
+            <div id="tab3" class="tab">
+                <h3>Kids' Items</h3>
+                <div id="item-details-kids" class="item-details"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

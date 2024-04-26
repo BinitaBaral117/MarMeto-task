@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* ***************************************************MAIN*********************************************************** */
+h3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 3px solid rgb(242, 242, 131);
+    width: 500px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.choices p{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(199, 199, 199);
+    color: black;
+}
+
+.choices p:hover{
+    cursor: pointer;    
+    background-color: #000;
+    color: #fff;
+}
+
+#men, #women, #kids{
+    border: none;
+}
+
+
+
+/* *****************************************************ITEMS BUTTONS*********************************************** */
+button{
+    border: none;
+    background-color: rgb(199, 199, 199);
+    width: 50%;
+    height: 100%;
+}
+
+.choices p:hover button {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* *************************************************ITEMSCONTENT**************************************/
+
+ .item-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.item-details div {
+    width: calc(25% - 18px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    margin-left: 70px;
+    margin-right: -99px;
+}
+
+.item-details img {
+    width: 300%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .item-details div {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .item-details div {
+        width: calc(100% - 20px);
+    }
+}
+
+
+/************************************************************PRODUCT***************************************** */
+@media screen and (min-width: 768px) {
+    .product {
+        width: 100%; /* Adjust the width for larger screens */
+    }
+}
+
+.product h4 {
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.product h4, .product p {
+    white-space: nowrap;
+}
+
+.product-details .product-title {
+    white-space: nowrap;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    width: 200%;
+    justify-content: center;
+}
+
+.product-title, .vendor {
+    margin: 3px;
+}
+.product-details p.vendor::before {
+    content: "•"; 
+}
+
+
+/**************************************************BADGE********************************************** */
+.product .badge-text {
+    background-color: white;
+    color: black;
+    border: transparent; 
+    border-radius: 3px; 
+    display: inline-block;
+    margin-left: 5px;
+    padding: 3px;
+    top: 220px; 
+    position: absolute;
+}
+
+
+
+/* *********************************************PRICES STYLE************************************************* */
+
+.prices {
+    display: flex;
+    justify-content:center;
+}
+
+.prices p {
+    margin-right: 10px; 
+}
+
+.price{
+    font-weight: 500;
+}
+
+.compare-at-price{
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #999;
+    font-size: 14px;
+}
+
+.discount{
+    color: red;
+}
+
+/* **********************************************ADD TO CART************************************************** */
+.add-to-cart{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+}
+
+
+
+/*  *********************************************POP UP************************************************* */
+.product {
+    position: relative;
+    display: inline-block;
+}
+
+.pop-up {
+    position: absolute;
+    top: 100%;
+    right: 100px;
+    transform: translateX(-50%);
+    padding: 1vw;
+    border-radius: 1vw;
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    animation: fadeIn 0.3s ease 5s forwards; /* Delayed animation */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; visibility: visible; }
+}
+
+.product:hover .pop-up {
+    visibility: visible;
+    opacity: 1;
+    animation: none; 
+}
